@@ -12,4 +12,11 @@
   	values (#{title},to_date(#{time_limit},'yy-mm-dd'))
   </insert>
   
+  <update id="update" parameterType="com.todo.app.entity.Todo">
+  	update todo_items set
+    	title = #{title},
+    	time_limit = to_date(#{time_limit},'yy-mm-dd')
+    	where id = #{id}
+  </update>
+  
 </mapper>
