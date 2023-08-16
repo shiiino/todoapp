@@ -8,11 +8,11 @@
   </select>
 
   <select id="selectIncomplete" resultType="com.todo.app.entity.Todo">
-  	select * from todo_items where done_flg = 0 
+  	select * from todo_items where done_flg = 0 ORDER BY time_limit ASC
   </select>
 
   <select id="selectComplete" resultType="com.todo.app.entity.Todo">
-  	select * from todo_items where done_flg = 1
+  	select * from todo_items where done_flg = 1 ORDER BY time_limit ASC
   </select>
 
   <insert id="add" parameterType="com.todo.app.entity.Todo">
