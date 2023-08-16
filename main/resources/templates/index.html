@@ -24,12 +24,17 @@
 	<input type="submit" value="更新"/>
   </form>
   
+  <form method="post" th:action="@{/delete}">
+	  <input type="submit" value="完了済みを削除">
+  </form>
+  
   <h3>タスクを追加</h3>
   <form method="post" th:action="@{/add}">
   	<input type="text" name="title"/>
   	<input type="date" name="time_limit"/>
   	<input type="submit" value="追加"/>
   </form>
+
 
 </body>
 </html>
